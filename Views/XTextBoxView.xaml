@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="XControls.Views.XTextBoxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XControls.Views" 
+             xmlns:usercontrols="clr-namespace:XControls.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Content="No limits"/>
+                <usercontrols:XTextBox Grid.Column="1"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="Precision of 4"/>
+                <usercontrols:XTextBox Grid.Row="1" Grid.Column="1" LimitationPrecision="4"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Positive"/>
+                <usercontrols:XTextBox Grid.Row="2" Grid.Column="1" LimitationType="Positive"/>
+
+                <Label Grid.Row="3" Grid.Column="0" Content="Negative"/>
+                <usercontrols:XTextBox Grid.Row="3" Grid.Column="1" LimitationType="Negative"/>
+
+                <Label Grid.Row="4" Grid.Column="0" Content="Minimum 50"/>
+                <usercontrols:XTextBox Grid.Row="4" Grid.Column="1" LimitationValue="Minimum" Minimum="50"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Content="Maximum -50"/>
+                <usercontrols:XTextBox Grid.Row="5"  Grid.Column="1" LimitationValue="Maximum" Maximum="-50"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Content="Range 50 to 250"/>
+                <usercontrols:XTextBox Grid.Row="6" Grid.Column="1" LimitationValue="Range" Minimum="50" Maximum="250"/>
+
+                <Label Grid.Row="7" Grid.Column="0" Content="Integer"/>
+                <usercontrols:XTextBox Grid.Row="7" Grid.Column="1" LimitationInteger="True"/>
+
+                <Label Grid.Row="8" Grid.Column="0" Content="Integer, Positive"/>
+                <usercontrols:XTextBox Grid.Row="8" Grid.Column="1" LimitationInteger="True" LimitationType="Positive"/>
+
+                <Label Grid.Row="9" Grid.Column="0" Content="Integer, Negative"/>
+                <usercontrols:XTextBox Grid.Row="9" Grid.Column="1" LimitationInteger="True" LimitationType="Negative"/>
+
+                <Label Grid.Row="10" Grid.Column="0" Content="Integer, Minimum 50"/>
+                <usercontrols:XTextBox Grid.Row="10" Grid.Column="1" LimitationInteger="True" LimitationValue="Minimum" Minimum="50"/>
+
+                <Label Grid.Row="11" Grid.Column="0" Content="Integer, Maximum -50"/>
+                <usercontrols:XTextBox Grid.Row="11" Grid.Column="1" LimitationInteger="True" LimitationValue="Maximum" Maximum="-50"/>
+                
+                <Label Grid.Row="12" Grid.Column="0" Content="Integer, Range 50 to 250"/>
+                <usercontrols:XTextBox Grid.Row="12" Grid.Column="1" LimitationInteger="True" LimitationValue="Range" Minimum="50" Maximum="250"/>
+
+                <Label Grid.Row="13" Grid.Column="0" Content="Currency"/>
+                <usercontrols:XTextBox Grid.Row="13" Grid.Column="1" LimitationType="Currency"/>
+
+                <Label Grid.Row="14" Grid.Column="0" Content="Percents"/>
+                <usercontrols:XTextBox Grid.Row="14" Grid.Column="1" LimitationType="Percents"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
